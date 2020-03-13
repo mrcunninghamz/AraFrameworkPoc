@@ -1,10 +1,10 @@
 import { mountComponent, loadById, load } from 'nova-react';
 
-import ReactCard from './components/ReactCard';
+import Temperature from './components/Temperature/Temperature';
 
 const render = (name, { node, data }) => {
-  if (name === 'ReactCard') {
-    return mountComponent(ReactCard, node, data)
+  if (name === 'Temperature') {
+    return mountComponent(Temperature, node, data)
   }
 }
 
@@ -18,4 +18,4 @@ document.addEventListener('NovaMount', ({ detail }) => {
   }
 })
 
-load('ReactCard').forEach(render.bind(null, 'ReactCard'))
+load('Temperature').forEach(render.bind(null, 'Temperature'))

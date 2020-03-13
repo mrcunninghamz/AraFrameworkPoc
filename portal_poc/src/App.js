@@ -1,27 +1,54 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import { Grid, GridCell } from '@rmwc/grid';
+import { TopAppBar, TopAppBarRow, TopAppBarSection, TopAppBarTitle, TopAppBarFixedAdjust, TopAppBarActionItem} from '@rmwc/top-app-bar';
+import { Nova } from 'nova-react-bridge';
+
+import NavDrawer from './components/NavDrawer/NavDrawer'
+import Home from './components/Home/Home';
+
 import './App.css';
-import { Nova } from 'nova-react-bridge'
+import '@material/layout-grid/dist/mdc.layout-grid.css';
+import '@material/top-app-bar/dist/mdc.top-app-bar.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Nova name="ReactCard" data={{title: "This is a React Card Component" }} />
-      </header>
-    </div>
+    <Router>
+      <TopAppBar fixed>
+        <TopAppBarRow>
+          <TopAppBarSection>
+            <TopAppBarTitle>Ara Framework POC</TopAppBarTitle>
+          </TopAppBarSection>
+          <TopAppBarSection alignEnd>
+            <Nova name="UserAvatar"/>
+          </TopAppBarSection>
+        </TopAppBarRow>
+      </TopAppBar>
+      <TopAppBarFixedAdjust />
+      <Grid>
+        <GridCell span={2}>
+          <NavDrawer></NavDrawer>
+        </GridCell>
+        <GridCell span={10}>
+        <Switch>
+          <Route path="/profile">
+            <Nova name="Profile"/>
+          </Route>
+          <Route path="/weather">
+            <Nova name="Temperature"/>
+          </Route>
+          <Route path="/" component={Home}>
+          </Route>
+        </Switch>
+        </GridCell>
+      </Grid>
+    </Router>
   );
 }
 

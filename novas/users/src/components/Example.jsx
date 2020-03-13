@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ReactCard = ({ title }) => <h1>{ title }</h1>;
+const Example = ({ title }) => <h1>{ title }</h1>;
 
-ReactCard.propTypes = {
+Example.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default ReactCard;
+export default Example;

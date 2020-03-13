@@ -1,3 +1,5 @@
 {
-    "ReactCard": "http://localhost:8080/client.js"
+    "Temperature": "http://localhost:8080/client.js",
+    "Profile": "http://localhost:9000/client.js",
+    "UserAvatar": "http://localhost:9000/client.js"
 }

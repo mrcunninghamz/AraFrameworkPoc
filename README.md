@@ -35,3 +35,14 @@ Go to novas/react_card and run the node server
 ```
 npm run dev
 ```
+
+Add this line to your module.rules in the webpack.config.js if your nova is using css
+
+```json
+{
+  test: /\.css$/,
+  use: [
+    'css-loader'
+  ]
+}
+```

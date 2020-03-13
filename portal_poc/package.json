@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/drawer": "^5.1.0",
+    "@material/layout-grid": "^5.1.0",
+    "@material/list": "^5.1.0",
+    "@material/top-app-bar": "^5.1.0",
+    "@rmwc/drawer": "^5.7.2",
+    "@rmwc/grid": "^5.7.2",
+    "@rmwc/list": "^5.7.2",
+    "@rmwc/top-app-bar": "^5.7.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -10,6 +18,7 @@
     "nova-react-bridge": "^0.2.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0"
   },
   "scripts": {
