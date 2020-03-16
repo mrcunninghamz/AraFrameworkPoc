@@ -89,7 +89,7 @@ npm run dev
 
 Add this line to your module.rules in the webpack.config.js if your nova is using css
 
-```json
+```javascript
 {
   test: /\.css$/,
   use: [
@@ -132,4 +132,4 @@ load('UserAvatar').forEach(render.bind(null, 'UserAvatar'))
 load('Profile').forEach(render.bind(null, 'Profile'))
 ```
 
-The components are imported and then mounted based on the reqest made by the host application.
+The components are imported and then mounted based on the request made by the host application.
